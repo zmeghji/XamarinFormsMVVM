@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="XamarinFormsMVVM.CreateNinja"
+             >
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Label
+                Grid.Row="0"
+                Grid.ColumnSpan="2">
+                Create Ninja Page
+            </Label>
+            <Label
+                Grid.Row="1"
+                Grid.Column="0"
+                >First Name</Label>
+            <Entry
+                Grid.Row="1"
+                Grid.Column="1"
+                Text="{Binding FirstName, Mode=TwoWay}">
+            </Entry>
+            <Label
+                Grid.Row="2"
+                Grid.Column="0"
+                >Last Name</Label>
+            <Entry
+                Grid.Row="2"
+                Grid.Column="1"
+                Text="{Binding LastName, Mode=TwoWay}">
+            </Entry>
+            <Button
+                Grid.Row="3"
+                Grid.ColumnSpan="2"
+                Text="Create"
+                Command="{Binding CreateNinjaCommand}">
+            </Button>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
